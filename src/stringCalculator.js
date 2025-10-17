@@ -1,9 +1,10 @@
 function add(numbers) {
     if (!numbers) return 0;
-    const nums = numbers.split(',').map(Number);
+    const nums = numbers.split(/[\n,]/).map(Number);
+
     return nums.reduce((a, b) => a + b, 0);
 }
   
   
-  module.exports = { add };
+module.exports = { add };
   
